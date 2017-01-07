@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 11, 2016 at 10:40 PM
+-- Generation Time: Jan 08, 2017 at 12:30 AM
 -- Server version: 5.6.24
 -- PHP Version: 5.6.8
 
@@ -33,7 +33,14 @@ CREATE TABLE IF NOT EXISTS `admin` (
   `admin_pass` varchar(200) NOT NULL,
   `real_pass` varchar(200) NOT NULL,
   `register_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`adminID`, `admin_name`, `admin_email`, `admin_pass`, `real_pass`, `register_date`) VALUES
+(1, 'Osemeke Samuel', 'info@aol.com', '7b84020a833f215daf983cb9f48043dd06ecf709', 'church2', '2016-12-12 18:49:33');
 
 -- --------------------------------------------------------
 
@@ -54,7 +61,15 @@ CREATE TABLE IF NOT EXISTS `articles` (
   `article_url` varchar(200) NOT NULL,
   `article_author` varchar(200) NOT NULL,
   `article_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `articles`
+--
+
+INSERT INTO `articles` (`articleID`, `article_title`, `article_category`, `article_body`, `article_image`, `article_music`, `article_video`, `article_counter`, `article_source`, `article_url`, `article_author`, `article_date`) VALUES
+(7, 'I love Web Designing and Development', 4, 'I am a web designer I am a web designer I am a web designer I am a web designer I am a web designer I am a web designer I am a web designer I am a web designer I am a web designer I am a web designer I am a web designer I am a web designer I am a web designer I am a web designer I am a web designer I am a web designer I am a web designer I am a web designer I am a web designer I am a web designer I am a web designer I am a web designer I am a web designer', '14650232_10205780067655722_7045072381415977637_n.jpg', '', '', 29, 'source.com', 'i-love-web-designing-and-development.html', 'admin', '2016-12-21 11:54:19'),
+(8, 'Merry Christmas: The Season of Love', 3, 'Merry Christmas, The season of love,Merry Christmas, The season of love,Merry Christmas, The season of love,Merry Christmas, The season of love,Merry Christmas, The season of love,Merry Christmas, The season of love,Merry Christmas, The season of love,Merry Christmas, The season of love,Merry Christmas, The season of love,Merry Christmas, The season of love,Merry Christmas, The season of love,Merry Christmas, The season of love,', '14572783_10205756810674312_8169103769961686346_n.jpg', '', '', 29, 'source.net', 'merry-christmas--the-season-of-love.html', 'admin', '2016-12-25 23:45:38');
 
 -- --------------------------------------------------------
 
@@ -66,7 +81,17 @@ CREATE TABLE IF NOT EXISTS `category` (
   `catID` int(20) NOT NULL,
   `category` varchar(200) NOT NULL,
   `category_url` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `category`
+--
+
+INSERT INTO `category` (`catID`, `category`, `category_url`) VALUES
+(1, 'Editorials', 'editorials.html'),
+(2, 'News', 'news.html'),
+(3, 'Videos', 'videos.html'),
+(4, 'Music', 'music.html');
 
 -- --------------------------------------------------------
 
@@ -80,7 +105,18 @@ CREATE TABLE IF NOT EXISTS `comments` (
   `comment_message` text NOT NULL,
   `comment_url` varchar(300) NOT NULL,
   `comment_date` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `comments`
+--
+
+INSERT INTO `comments` (`commentID`, `comment_name`, `comment_message`, `comment_url`, `comment_date`) VALUES
+(1, 'osemeke', 'i love web designing', 'i-love-my.html', '2016-12-12 18:54:28'),
+(2, 'osemske', 'You are so beautiful. Come on, i see no changes, pull the trigger, kill the niger is the order of the day. i swear that the way it is.You are so beautiful. Come on, i see no changes, pull the trigger, kill the niger is the order of the day. i swear that the way it is.You are so beautiful. Come on, i see no changes, pull the trigger, kill the niger is the order of the day. i swear that the way it is.You are so beautiful. Come on, i see no changes, pull the trigger, kill the niger is the order of the day. i swear that the way it is.', 'merry-christmas--the-season-of-love.html', '2016-12-28 17:55:09'),
+(3, 'chaadaf', 'adskajdsklas', 'i-love-web-designing-and-development.html', '2017-01-05 14:39:24'),
+(4, 'osemeke samuel', 'jkawejdfaldf;asldkfcas', 'merry-christmas--the-season-of-love.html', '2017-01-05 15:42:34'),
+(5, 'osemeke samuel', 'djtukygdtyjyh', 'merry-christmas--the-season-of-love.html', '2017-01-05 15:43:40');
 
 --
 -- Indexes for dumped tables
@@ -118,22 +154,22 @@ ALTER TABLE `comments`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `adminID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `adminID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `articleID` int(200) NOT NULL AUTO_INCREMENT;
+  MODIFY `articleID` int(200) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `catID` int(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `catID` int(20) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `commentID` int(200) NOT NULL AUTO_INCREMENT;
+  MODIFY `commentID` int(200) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
