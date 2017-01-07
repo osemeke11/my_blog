@@ -24,3 +24,7 @@
 
 	require 'views/index.view.php';
 
+	
+	include "includes/sidebar.php";
+	include "includes/footer.php";
+

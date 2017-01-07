@@ -75,6 +75,3 @@
 
 
 
-<!-- Include Sidebar and Header -->
-<?php include "/../includes/sidebar.php"; ?>
-<?php include "/../includes/footer.php"; ?>
