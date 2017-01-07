@@ -1,6 +1,7 @@
 <!-- Includes Header -->
-<?php include "includes/header.php"; ?>
-<?php
+<?php 
+
+	include "includes/header.php"; 
 
 	// Validate the search Form
 	if(isset($_GET['Search'])){
@@ -17,4 +18,5 @@
 
 	require 'views/search.view.php';
 
-?>
+	include "includes/sidebar.php";
+	include "includes/footer.php";

@@ -29,4 +29,5 @@ $firstPage = 1;
 
 require 'views/category.view.php';
 
-?>
+include "includes/sidebar.php";
+include "includes/footer.php";

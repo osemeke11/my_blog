@@ -102,7 +102,7 @@
 
 
 // now try it
-$ua=getBrowser();
-$yourbrowser= "Your browser: " . $ua['name'] . " " . $ua['version'] . " on " .$ua['platform'] . " reports: <br >" . $ua['userAgent'];
-print_r($yourbrowser);
+// $ua=getBrowser();
+// $yourbrowser= "Your browser: " . $ua['name'] . " " . $ua['version'] . " on " .$ua['platform'] . " reports: <br >" . $ua['userAgent'];
+// print_r($yourbrowser);
 ?>
