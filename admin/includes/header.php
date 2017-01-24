@@ -3,7 +3,6 @@
 	session_start();
 	include "../libraries/DBInteractor.php";
 	include "../libraries/DB_admin.php";
-	include "../libraries/image_uploader.php";
 	include "../helpers/format.php";
 
 	$db = new DB();
@@ -23,8 +22,6 @@
 	<link rel="stylesheet" type="text/css" href="../css/custom.css" />
 	<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css" />
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
-	<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
-	<script>tinymce.init({ selector:'textarea' });</script>
 	<script type="text/javascript" src="../js/modernizr.custom.js"></script>
 	
 </head>

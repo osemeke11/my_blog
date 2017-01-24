@@ -9,12 +9,12 @@
 	if($_SERVER["REQUEST_METHOD"] == "POST") {
 			
 		//$message = array();
-		$art_title = $_SESSION['add-article']['art-title'] = test_input($_POST['art-title']);
-		$art_category = $_SESSION['add-article']['art-category'] = test_input($_POST['art-category']);
-		$art_body = $_SESSION['add-article']['art-body'] = test_input($_POST['art-body']);
-		$art_music = $_SESSION['add-article']['art-music'] = test_input($_POST['art-music']);
-		$art_video = $_SESSION['add-article']['art-video'] = test_input($_POST['art-video']);
-		$art_source = $_SESSION['add-article']['art-source'] = test_input($_POST['art-source']);
+		$art_title = test_input($_POST['art_title']);
+		$art_category = test_input($_POST['art_category']);
+		$art_body = test_input($_POST['art_body']);
+		$art_music = test_input($_POST['art_music']);
+		$art_video = test_input($_POST['art_video']);
+		$art_source = test_input($_POST['art_source']);
 		$art_counter = 0;
 		$art_url = createSlug($art_title) . ".html";
 
@@ -93,13 +93,12 @@
 		<!-- Article Title -->
 		<div class="form-group row">
 			<label class="col-md-2">Article Title</label>
-			<input type="text" name="art-title" class="form-normal col-md-4" id="art-title" value="<?php echo @$art_title; ?>" required />
-			<span class="col-md-6 form-error" id="title_error"></span>
+			<input type="text" name="art_title" class="form-normal col-md-4" id="art-title" value="<?php echo @$art_title; ?>" required />
 		</div>
 		<!-- Article Category -->
 		<div class="form-group row">
 			<label class="col-md-2">Article Category</label>
-			<select class="form-normal col-md-3" name="art-category" id="art-category" required>
+			<select class="form-normal col-md-3" name="art_category" id="art-category" required>
 				<option value="">Select the article category</option>
 				<?php foreach($cat_run as $cat_row): ?>
 					<option value="<?php echo $cat_row['catID']; ?>">
@@ -107,13 +106,11 @@
 					</option>
 				<?php endforeach; ?>
 			</select>
-			<span class="col-md-7 form-error" id="category_error"></span>
 		</div>
 		<!-- Article Image -->
 		<div class="form-group row">
 			<label class="col-md-2">Article Image</label>
 			<input type="file" name="art_image" id="art-image" class="form-normal col-md-3"  required />
-			<span class="col-md-3 form-error" id="image_error"></span>
 		</div>
 		<!-- Article Body -->
 		<div class="form-group row">
@@ -121,24 +118,23 @@
 				<label>Article Body</label>
 			</div>
 			<div class="col-md-4">
-				<textarea name="art-body" class="form-text" id="art-body" cols="40" rows="10" required><?php echo @$art_body; ?></textarea>
+				<textarea name="art_body" class="form-text" id="art-body" cols="40" rows="10" required><?php echo @$art_body; ?></textarea>
 			</div>
-			<span class="col-md-4 form-error" id="body_error"></span>
 		</div>
 		<!-- Article Music -->
 		<div class="form-group row">
 			<label class="col-md-2">Article Music</label>
-			<input type="text" name="art-music" id="art-music" class="form-normal col-md-4" value="<?php echo @$art_music; ?>" />
+			<input type="text" name="art_music" id="art-music" class="form-normal col-md-4" value="<?php echo @$art_music; ?>" />
 		</div>
 		<!-- Article Video -->
 		<div class="form-group row">
 			<label class="col-md-2">Article Videos</label>
-			<input type="text" name="art-video" id="art-videos" class="form-normal col-md-4" value="<?php echo @$art_video; ?>" />
+			<input type="text" name="art_video" id="art-videos" class="form-normal col-md-4" value="<?php echo @$art_video; ?>" />
 		</div>
 		<!-- Article Source -->
 		<div class="form-group row">
 			<label class="col-md-2">Article Source</label>
-			<input type="text" name="art-source" id="art-source" class="form-normal col-md-4" value="<?php echo @$art_source; ?>" />
+			<input type="text" name="art_source" id="art-source" class="form-normal col-md-4" value="<?php echo @$art_source; ?>" />
 		</div>
 		<!-- Submit Button -->
 		<div class="row form-group">
